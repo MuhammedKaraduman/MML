@@ -237,7 +237,7 @@ call_args
  * ════════════════════════════════════════════════════════════════════ */
 void yyerror(const char *msg)
 {
-    fprintf(stderr, "[PARSE ERROR] %s\n", msg);
+    fprintf(stderr, "[PARSE ERROR] line %d: %s\n", yylineno, msg);
 }
 
 /* ════════════════════════════════════════════════════════════════════

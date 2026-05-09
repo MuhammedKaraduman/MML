@@ -7,6 +7,7 @@
 %option noyywrap
 %option nounput
 %option noinput
+%option yylineno
 
 %{
 #include "mml.h"
