@@ -1,0 +1,46 @@
+// Test 4 — FOR Dongusu ve Built-in Fonksiyonlar
+// FOR...FROM...TO...STEP, SIN/COS/SQRT/LOG/EXP/ABS/FLOOR/CEIL
+
+PRINT "=== Carpim Tablosu (1-5) ==="
+FOR i FROM 1 TO 5 DO
+  FOR j FROM 1 TO 5 DO
+    SET carpim = i * j
+    PRINT i, "x", j, "=", carpim
+  END
+END
+
+PRINT "=== Trigonometri (0-360, adim 45) ==="
+PRINT "Aci | SIN  | COS"
+FOR deg FROM 0 TO 360 STEP 45 DO
+  PRINT deg, SIN(deg), COS(deg)
+END
+
+PRINT "=== Karekokler (1-10) ==="
+FOR n FROM 1 TO 10 DO
+  PRINT "sqrt(", n, ") =", SQRT(n)
+END
+
+PRINT "=== Matematiksel Sabitler ==="
+PRINT "e       =", EXP(1)
+PRINT "ln(10)  =", LOG(10)
+PRINT "ln(e)   =", LOG(EXP(1))
+PRINT "sqrt(2) =", SQRT(2)
+
+PRINT "=== ABS / FLOOR / CEIL ==="
+SET degerler = -3
+FOR x FROM -3 TO 3 STEP 1 DO
+  PRINT "x=", x, "abs=", ABS(x), "floor=", FLOOR(x), "ceil=", CEIL(x)
+END
+
+PRINT "=== Geri Sayim (10'dan 1'e) ==="
+FOR i FROM 10 TO 1 STEP -1 DO
+  PRINT i
+END
+PRINT "Bitis!"
+
+PRINT "=== Us Alma Tablosu ==="
+FOR base FROM 2 TO 5 DO
+  FOR pw FROM 1 TO 4 DO
+    PRINT base, "^", pw, "=", base ^ pw
+  END
+END

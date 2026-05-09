@@ -1,0 +1,69 @@
+// Test 5 — Kullanici Tanimli Fonksiyonlar
+// DEF ile fonksiyon tanimlama, parametreli cagri, ic ice cagri
+
+PRINT "=== Temel Fonksiyonlar ==="
+
+DEF square(n) = n * n
+DEF cube(n) = n * n * n
+DEF double(n) = n * 2
+DEF half(n) = n / 2
+
+PRINT "square(5)  =", square(5)
+PRINT "cube(3)    =", cube(3)
+PRINT "double(7)  =", double(7)
+PRINT "half(20)   =", half(20)
+
+PRINT "=== Geometri Fonksiyonlari ==="
+
+DEF circle_area(r) = 3.14159 * square(r)
+DEF circle_perimeter(r) = 2 * 3.14159 * r
+DEF triangle_area(b, h) = b * h / 2
+DEF hypotenuse(a, b) = SQRT(square(a) + square(b))
+DEF rect_area(w, h) = w * h
+DEF rect_perimeter(w, h) = 2 * (w + h)
+
+PRINT "Cember alani    r=5:", circle_area(5)
+PRINT "Cember cevresi  r=5:", circle_perimeter(5)
+PRINT "Ucgen alani  b=6 h=4:", triangle_area(6, 4)
+PRINT "Hipotenüs   3-4-?  :", hypotenuse(3, 4)
+PRINT "Dikdortgen  6x8    :", rect_area(6, 8)
+
+PRINT "=== Dongu + Fonksiyon ==="
+PRINT "Daireler (r=1..5):"
+FOR r FROM 1 TO 5 DO
+  PRINT "r=", r, "alan=", circle_area(r), "cevre=", circle_perimeter(r)
+END
+
+PRINT "=== Istatistik Fonksiyonlari ==="
+
+DEF clamp(x, lo, hi) = x
+
+// Not: clamp gercek min/max icin IF gerektiriyor, burada DEF single-expr
+// Su sekilde IF olmadan max/min taklidi:
+DEF max2(a, b) = (a + b + ABS(a - b)) / 2
+DEF min2(a, b) = (a + b - ABS(a - b)) / 2
+
+PRINT "max(3, 7)  =", max2(3, 7)
+PRINT "min(3, 7)  =", min2(3, 7)
+PRINT "max(-5, 2) =", max2(-5, 2)
+
+PRINT "=== Fizik Formulleri ==="
+
+DEF kinetic_energy(m, v) = half(m * square(v))
+DEF potential_energy(m, h) = m * 9.81 * h
+DEF velocity_after(u, a, t) = u + a * t
+DEF distance(u, a, t) = u * t + half(a * square(t))
+
+PRINT "Kinetik enerji m=2 v=10:", kinetic_energy(2, 10)
+PRINT "Potansiyel enerji m=5 h=3:", potential_energy(5, 3)
+PRINT "Hiz: u=0 a=9.81 t=3:", velocity_after(0, 9.81, 3)
+PRINT "Mesafe: u=0 a=9.81 t=3:", distance(0, 9.81, 3)
+
+PRINT "=== Fonksiyon + WHILE ==="
+SET toplam = 0
+SET i = 1
+WHILE i <= 10 DO
+  SET toplam = toplam + square(i)
+  SET i = i + 1
+END
+PRINT "1^2 + 2^2 + ... + 10^2 =", toplam

@@ -1,0 +1,75 @@
+// Test 2 — IF/ELSE ve Boolean Kosullar
+// Ic ice if, AND/OR/NOT, karsilastirma operatorleri
+
+PRINT "=== Sayi Siniflandirma ==="
+
+SET x = 42
+IF x > 0 AND x < 100 THEN
+  IF x % 2 == 0 THEN
+    PRINT x, "pozitif ve cift"
+  ELSE
+    PRINT x, "pozitif ve tek"
+  END
+ELSE
+  PRINT x, "aralik disi"
+END
+
+SET y = -7
+IF NOT y > 0 THEN
+  PRINT y, "negatif sayi"
+END
+
+PRINT "=== Karsilastirma Operatorleri ==="
+SET a = 5
+SET b = 10
+
+IF a == b THEN
+  PRINT "a esit b"
+ELSE
+  PRINT "a esit degil b"
+END
+
+IF a != b THEN
+  PRINT "a farkli b"
+END
+
+IF a <= b THEN
+  PRINT "a kucuk veya esit b"
+END
+
+PRINT "=== AND / OR / NOT ==="
+SET p = 1
+SET q = 0
+
+IF p == 1 AND q == 0 THEN
+  PRINT "p dogru, q yanlis"
+END
+
+IF p == 0 OR q == 0 THEN
+  PRINT "en az biri yanlis"
+END
+
+IF NOT p == 0 THEN
+  PRINT "p sifir degil"
+END
+
+PRINT "=== Ic Ice IF ==="
+SET deger = 75
+
+IF deger >= 90 THEN
+  PRINT "Not: AA"
+ELSE
+  IF deger >= 80 THEN
+    PRINT "Not: BA"
+  ELSE
+    IF deger >= 70 THEN
+      PRINT "Not: BB"
+    ELSE
+      IF deger >= 60 THEN
+        PRINT "Not: CB"
+      ELSE
+        PRINT "Not: FF"
+      END
+    END
+  END
+END

@@ -1,0 +1,55 @@
+// Test 3 — WHILE Dongusu
+// Fibonacci dizisi, carpanlar, sayi tahmin dongusu
+
+PRINT "=== Fibonacci Dizisi (ilk 10 eleman) ==="
+SET a = 0
+SET b = 1
+SET count = 0
+WHILE count < 10 DO
+  PRINT b
+  SET temp = a + b
+  SET a = b
+  SET b = temp
+  SET count = count + 1
+END
+
+PRINT "=== 2'nin Katlarini Bul (100'e kadar) ==="
+SET n = 1
+WHILE n <= 100 DO
+  IF n % 2 == 0 THEN
+    PRINT n
+  END
+  SET n = n + 1
+END
+
+PRINT "=== Faktoriyel Hesabi (10!) ==="
+SET sayi = 10
+SET sonuc = 1
+SET i = 1
+WHILE i <= sayi DO
+  SET sonuc = sonuc * i
+  SET i = i + 1
+END
+PRINT "10! =", sonuc
+
+PRINT "=== Basamak Toplami (12345) ==="
+SET num = 12345
+SET toplam = 0
+WHILE num > 0 DO
+  SET toplam = toplam + num % 10
+  SET num = FLOOR(num / 10)
+END
+PRINT "Basamak toplami:", toplam
+
+PRINT "=== Collatz Dizisi (27'den baslayarak) ==="
+SET n = 27
+SET adim = 0
+WHILE n != 1 DO
+  IF n % 2 == 0 THEN
+    SET n = n / 2
+  ELSE
+    SET n = 3 * n + 1
+  END
+  SET adim = adim + 1
+END
+PRINT "1'e ulasmak icin adim sayisi:", adim

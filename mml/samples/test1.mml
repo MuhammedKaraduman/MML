@@ -1,0 +1,32 @@
+// Test 1 — Temel Aritmetik ve Degiskenler
+// Degisken atama, dort islem, modulo, us alma
+
+SET a = 10
+SET b = 3
+
+PRINT "=== Temel Aritmetik ==="
+PRINT "a =", a
+PRINT "b =", b
+PRINT "a + b =", a + b
+PRINT "a - b =", a - b
+PRINT "a * b =", a * b
+PRINT "a / b =", a / b
+PRINT "a % b =", a % b
+PRINT "a ^ 2 =", a ^ 2
+PRINT "a ^ b =", a ^ b
+
+PRINT "=== Karmasik Ifadeler ==="
+SET ortalama = (a + b) / 2
+PRINT "Ortalama:", ortalama
+
+SET c = (a + b) * (a - b)
+PRINT "(a+b)*(a-b) =", c
+
+SET d = a ^ 2 + b ^ 2
+PRINT "a^2 + b^2 =", d
+
+PRINT "=== Zincirleme Atama ==="
+SET x = 100
+SET x = x / 4
+SET x = x - 5
+PRINT "x =", x
